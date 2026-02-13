@@ -1,0 +1,24 @@
+diff --git a/scripts/make_download_zip.sh b/scripts/make_download_zip.sh
+new file mode 100755
+index 0000000000000000000000000000000000000000..a47b7986fccdfd7a6858db2d1b353af6253b65a7
+--- /dev/null
++++ b/scripts/make_download_zip.sh
+@@ -0,0 +1,18 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
++OUTPUT_ZIP="${1:-$ROOT_DIR/Bookieverse-upload.zip}"
++
++cd "$ROOT_DIR"
++
++zip -r "$OUTPUT_ZIP" . \
++  -x ".git/*" \
++     "__pycache__/*" \
++     "*.pyc" \
++     "*.pyo" \
++     ".pytest_cache/*" \
++     ".venv/*" \
++     "venv/*"
++
++echo "Created: $OUTPUT_ZIP"
