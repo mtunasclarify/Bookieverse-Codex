@@ -1,0 +1,47 @@
+# 🚀 GitHub → Render Deployment Guide
+
+## Files You Have
+
+- `main.py` - Backend API
+- `index.html` - Frontend UI
+- `requirements.txt` - Dependencies
+- `README.md` - Documentation
+- `.gitignore` - Git ignore rules
+
+---
+
+## Step 1: Create GitHub Repo (5 minutes)
+
+### Option A: GitHub Website (Easiest)
+
+1. Go to **https://github.com**
+2. Sign in (or create account)
+3. Click **"+"** (top right) → **"New repository"**
+4. Name: **bookieverse**
+5. Make it **Public**
+6. **DON'T** add README (you already have one)
+7. Click **"Create repository"**
+
+### Option B: GitHub Desktop (If you prefer GUI)
+
+1. Download GitHub Desktop
+2. File → New Repository → "bookieverse"
+3. Drag all 5 files into the repo folder
+4. Commit & Publish
+
+### Option C: Command Line (If you're comfortable)
+
+```bash
+# Create a new folder
+mkdir bookieverse
+cd bookieverse
+
+# Copy all your files into this folder
+# Then:
+
+git init
+git add .
+git commit -m "Initial commit - BookieVerse P2P Sportsbook"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/bookieverse.git
+git push -u origin main
