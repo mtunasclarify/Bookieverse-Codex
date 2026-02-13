@@ -1,0 +1,11 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..fcb21047b1d723576aebd872ca50938521f13587
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,5 @@
++__pycache__/
++*.pyc
++.env
++
++Bookieverse-upload.zip
